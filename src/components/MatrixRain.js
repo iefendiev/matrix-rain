@@ -1,7 +1,7 @@
 import React from 'react';
 import RainStream from './RainStream';
 const MatrixRain = () => {
-  const streamCount = Math.floor(window.innerWidth / 26);
+  const streamCount = Math.floor(window.innerWidth / 15);
   return (
     <div
       style={{

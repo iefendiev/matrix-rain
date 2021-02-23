@@ -7,10 +7,10 @@ const VALID_CHARS = `abcdefghijklmnopqrstuvwxyz0123456789$+-*/=%"'#&_(),.;:?!\\|
 const getRandChar = () =>
   VALID_CHARS.charAt(Math.floor(Math.random() * VALID_CHARS.length));
 
-const STREAM_MUTATION_ODDS = 0.07;
+const STREAM_MUTATION_ODDS = 0.1;
 
 const MIN_STREAM_SIZE = 15;
-const MAX_STREAM_SIZE = 35;
+const MAX_STREAM_SIZE = 30;
 
 const getRandInRange = (min, max) =>
   Math.floor(Math.random() * (max - min)) + min;
@@ -53,7 +53,7 @@ const RainStream = () => {
       // setStream((stream) => [...stream.slice(1, stream.length), getRandChar()]);
       setStream(getMutatedStream);
     }
-  }, 50);
+  }, 200);
 
   return (
     <div
@@ -68,7 +68,7 @@ const RainStream = () => {
         marginLeft: '-15',
         marginRight: '-20',
         textShadow: '0px 0px 8px rgba(32, 194, 14, 0.8)',
-        fontSize: '50px',
+        fontSize: '30px',
       }}
     >
       {/* {'ipekk'.split('').map((char) => ( */}
